@@ -4,8 +4,8 @@
   "description": "Design engineering token systems, tactile spring physics, surface luminosity, and compositor contracts for Claude Code and AI frontend workflows.",
   "main": "src/index.js",
   "bin": {
-    "claude-design-engineer": "./bin/cli.js",
-    "cde": "./bin/cli.js"
+    "claude-design-engineer": "bin/cli.js",
+    "cde": "bin/cli.js"
   },
   "scripts": {
     "test": "node tests/run-tests.js",
