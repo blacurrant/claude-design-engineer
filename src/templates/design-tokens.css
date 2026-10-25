@@ -1,0 +1,57 @@
+/* ==========================================================================
+   CLAUDE DESIGN ENGINEER // CORE DESIGN TOKENS
+   Crafted by Nishant Choudhary (https://nishant.world)
+   120 FPS Compositor Contracts, Tactile Curves, & Specular Surface Luminosity
+   ========================================================================== */
+
+:root {
+  /* --- Motion Duration Tiers --- */
+  --motion-duration-instant: 75ms;
+  --motion-duration-fast: 150ms;
+  --motion-duration-moderate: 240ms;
+  --motion-duration-deliberate: 400ms;
+
+  /* --- Calibrated Asymmetric Curves --- */
+  --motion-ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-ease-enter: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --motion-ease-exit: cubic-bezier(0.3, 0, 0.8, 0.15);
+  --motion-ease-tactile: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* --- Dark Mode Surface Depth --- */
+  --surface-base: #090d16;
+  --surface-subtle: rgba(255, 255, 255, 0.03);
+  --surface-raised: rgba(255, 255, 255, 0.06);
+  --surface-glass: rgba(13, 19, 33, 0.75);
+
+  /* --- Luminosity & Borders --- */
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-luminous: rgba(0, 240, 255, 0.3);
+  --border-gold: rgba(255, 190, 11, 0.35);
+
+  /* --- Specular Highlights & Ambient Shadows --- */
+  --inner-glow: inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  --shadow-specular: inset 0 1px 0 0 rgba(255, 255, 255, 0.12), 0 16px 40px -10px rgba(0, 0, 0, 0.65);
+  --shadow-floating: inset 0 1px 0 0 rgba(255, 255, 255, 0.15), 0 24px 60px -12px rgba(0, 0, 0, 0.85);
+
+  /* --- Typography --- */
+  --font-numeric-tabular: tabular-nums;
+}
+
+/* Vestibular Accessibility Override */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-duration-instant: 0.01ms;
+    --motion-duration-fast: 0.01ms;
+    --motion-duration-moderate: 0.01ms;
+    --motion-duration-deliberate: 0.01ms;
+  }
+}
+
+/* Fluid Utilities */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.will-change-transform {
+  will-change: transform;
+}

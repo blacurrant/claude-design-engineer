@@ -1,0 +1,48 @@
+{
+  "name": "claude-design-engineer",
+  "version": "1.0.0",
+  "description": "Design engineering token systems, tactile spring physics, surface luminosity, and compositor contracts for Claude Code and AI frontend workflows.",
+  "main": "src/index.js",
+  "bin": {
+    "claude-design-engineer": "./bin/cli.js",
+    "cde": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "node tests/run-tests.js",
+    "audit": "node bin/cli.js audit tests/fixtures"
+  },
+  "keywords": [
+    "claude-code",
+    "openbot",
+    "design-engineering",
+    "design-tokens",
+    "framer-motion",
+    "tailwind",
+    "spring-physics",
+    "compositor",
+    "tactile-ui",
+    "micro-interactions"
+  ],
+  "author": "Nishant Choudhary <https://nishant.world>",
+  "license": "MIT",
+  "files": [
+    "bin",
+    "src",
+    "SKILL.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "funding": [
+    {
+      "type": "solana",
+      "url": "solana:F9DJTXa6xP7mdG1niMNDhqcM3vDq8LZvg25JqJXGvDTf"
+    },
+    {
+      "type": "portfolio",
+      "url": "https://nishant.world"
+    }
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
