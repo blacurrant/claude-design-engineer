@@ -24,7 +24,7 @@ ${colors.bold}${colors.cyan}CLAUDE DESIGN ENGINEER v1.0.0${colors.reset}
 ${colors.dim}Design Engineering Tokens, Spring Physics & AI UI Slop Auditor${colors.reset}
 
 ${colors.bold}USAGE:${colors.reset}
-  npx claude-design-engineer <command> [options]
+  npx @blacurrant/claude-design-engineer <command> [options]
   npx cde <command> [options]
 
 ${colors.bold}COMMANDS:${colors.reset}

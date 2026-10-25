@@ -84,6 +84,6 @@ export const springs = {
 
 Run the auditor command on generated code:
 ```bash
-npx claude-design-engineer audit <path-to-files>
+npx @blacurrant/claude-design-engineer audit <path-to-files>
 ```
 Verify that the output achieves **Grade S or A (Score >= 85/100)** before presenting code to users.

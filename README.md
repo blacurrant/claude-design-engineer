@@ -3,7 +3,7 @@
 > **Design Engineering Token System, Tactile Physics, and AI UI Slop Auditor for Claude Code and Modern Frontend Workflows.**
 > Eliminate generic robotic AI code generation. Inject 120 FPS compositor contracts, specular surface depth, and organic spring micro-interactions into your codebase.
 
-[![npm version](https://img.shields.io/badge/npm-v1.0.0-00f0ff.svg)](https://www.npmjs.com/package/claude-design-engineer)
+[![npm version](https://img.shields.io/badge/npm-v1.0.0-00f0ff.svg)](https://www.npmjs.com/package/@blacurrant/claude-design-engineer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Author: Nishant Choudhary](https://img.shields.io/badge/Author-Nishant%20Choudhary-00f0ff.svg)](https://nishant.world)
 [![Solana Sponsor](https://img.shields.io/badge/Solana-Sponsor-9945FF.svg)](https://explorer.solana.com/address/F9DJTXa6xP7mdG1niMNDhqcM3vDq8LZvg25JqJXGvDTf)
@@ -28,7 +28,7 @@ When AI coding assistants generate frontend code, they default to predictable, r
 Scan your components and stylesheets for robotic anti-patterns:
 
 ```bash
-npx claude-design-engineer audit ./src
+npx @blacurrant/claude-design-engineer audit ./src
 # or with alias
 npx cde audit ./src
 ```
@@ -88,7 +88,7 @@ The agent will automatically enforce 120 FPS compositor isolation, specular bord
 You can also import tokens and rules in Node.js scripts:
 
 ```javascript
-const { auditCodebase, motion, surfaces } = require('claude-design-engineer');
+const { auditCodebase, motion, surfaces } = require('@blacurrant/claude-design-engineer');
 
 // Run automated audits in custom CI pipelines
 const report = auditCodebase('./src/components');

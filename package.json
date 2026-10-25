@@ -1,5 +1,5 @@
 {
-  "name": "claude-design-engineer",
+  "name": "@blacurrant/claude-design-engineer",
   "version": "1.0.0",
   "description": "Design engineering token systems, tactile spring physics, surface luminosity, and compositor contracts for Claude Code and AI frontend workflows.",
   "main": "src/index.js",
