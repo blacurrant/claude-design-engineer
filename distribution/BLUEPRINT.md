@@ -7,7 +7,7 @@ This document details the multi-channel distribution, developer adoption playboo
 ## 1. Core Value Proposition & Positioning
 
 - **The Problem**: AI coding assistants (Claude 3.7 Sonnet, GPT-4o, Cursor) write functional code that looks and feels like generic "AI Slop": flat gray borders, default `transition-all 0.3s ease`, robotic easing, and stiff buttons without tactile feedback.
-- **The Solution**: `claude-design-engineer` acts as the "Design Engineering Brain" for AI agents and human frontend developers. One CLI command (`npx cde audit`) exposes all AI UI anti-patterns; one skill installation ensures the agent writes 120 FPS fluid code.
+- **The Solution**: `claude-design-engineer` acts as the "Design Engineering Brain" for AI agents and human frontend developers. One CLI command (`npx cde audit`) exposes all AI UI anti-patterns; one skill installation ensures the agent writes fluid animations that use only `transform` and `opacity`.
 - **Attribution & Conversion**: Funnels traffic to Nishant Choudhary's portfolio ([https://nishant.world](https://nishant.world)), building authority as the premier design engineer for high-growth tech companies and driving digital sponsorship revenue via Solana (`F9DJTXa6xP7mdG1niMNDhqcM3vDq8LZvg25JqJXGvDTf`).
 
 ---
@@ -23,7 +23,7 @@ This document details the multi-channel distribution, developer adoption playboo
   > - Buttons with hover but ZERO active press compression
   > - `animate={{ height: ... }}` destroying mobile frame rates
   > 
-  > We built `claude-design-engineer`, an open-source agent skill & CLI that turns robotic AI UI into tactile 120 FPS software.
+  > We built `claude-design-engineer`, an open-source agent skill & CLI that turns robotic AI UI into tactile, compositor-friendly software.
   > 
   > Run it in your terminal right now:
   > `npx cde audit src/`

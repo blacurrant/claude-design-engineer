@@ -1,6 +1,6 @@
 ---
 name: claude-design-engineer
-description: Inject design engineering token systems, tactile spring physics, surface luminosity, and 120 FPS compositor contracts into AI code generation to eliminate generic robotic UI slop.
+description: Inject design engineering token systems, tactile spring physics, surface luminosity, and compositor-only animation contracts (transform and opacity) into AI code generation to eliminate generic robotic UI slop.
 ---
 
 # `claude-design-engineer` Agent Skill
@@ -9,7 +9,7 @@ Use this skill whenever generating, auditing, or refactoring frontend interfaces
 
 ## The 5 Design Engineering Directives (Anti-Robotic UI Contract)
 
-### 1. The Compositor Contract (120 FPS Guarantee)
+### 1. The Compositor Contract (transform and opacity only)
 - **Zero Layout Reflow**: Never animate `height`, `width`, `top`, `bottom`, `left`, `right`, `margin`, or `padding`. Every layout recalculation destroys frame rates on mobile hardware.
 - **GPU Isolation**: Always animate `transform` (`translate3d`, `scaleX`, `scaleY`) and `opacity`.
 - **Pre-Rasterization**: Declare `will-change: transform` or `will-change: transform, opacity` on interactive sheets, floating dialogs, and animated cards.

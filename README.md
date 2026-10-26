@@ -1,9 +1,9 @@
 # `claude-design-engineer`
 
 > **Design Engineering Token System, Tactile Physics, and AI UI Slop Auditor for Claude Code and Modern Frontend Workflows.**
-> Eliminate generic robotic AI code generation. Inject 120 FPS compositor contracts, specular surface depth, and organic spring micro-interactions into your codebase.
+> Eliminate generic robotic AI code generation. Inject compositor-only animation rules (transform and opacity), specular surface depth, and organic spring micro-interactions into your codebase.
 
-[![npm version](https://img.shields.io/badge/npm-v1.0.0-00f0ff.svg)](https://www.npmjs.com/package/@blacurrant/claude-design-engineer)
+[![npm version](https://img.shields.io/badge/npm-v1.0.1-00f0ff.svg)](https://www.npmjs.com/package/@blacurrant/claude-design-engineer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Author: Nishant Choudhary](https://img.shields.io/badge/Author-Nishant%20Choudhary-00f0ff.svg)](https://nishant.world)
 [![Solana Sponsor](https://img.shields.io/badge/Solana-Sponsor-9945FF.svg)](https://explorer.solana.com/address/F9DJTXa6xP7mdG1niMNDhqcM3vDq8LZvg25JqJXGvDTf)
@@ -16,7 +16,7 @@ When AI coding assistants generate frontend code, they default to predictable, r
 - Flat gray borders (`border border-zinc-800` or `border-gray-200`) with zero optical depth or specular highlights.
 - Lazy blanket transitions (`transition-all duration-300 ease-in-out`) that cause layout jank on viewport resize.
 - Hover states with **zero active press feedback**, making web apps feel like static cardboard rather than responsive physical software.
-- Animating layout geometry (`height`, `width`, `top`, `margin`), destroying mobile frame rates down to 18 FPS.
+- Animating layout geometry (`height`, `width`, `top`, `margin`), which forces layout work on every frame and can make animations stutter on mobile.
 
 `claude-design-engineer` provides a standardized **Design Engineering Skill** for AI agents (Claude Code, OpenBot, Cursor), accompanied by a **zero-dependency CLI & Token Preset Library** to audit and elevate any React/Tailwind/CSS project.
 
@@ -45,7 +45,7 @@ This generates:
 - `design-tokens/tailwind-preset.js`: Drop-in Tailwind theme extension.
 
 ### 3. Eject Tactile Component Primitives
-Drop pre-built, 120 FPS compositor-isolated components directly into your codebase:
+Drop pre-built components that animate only `transform` and `opacity` directly into your codebase:
 
 ```bash
 npx cde eject card ./src/components      # TactileCard with pointer radial glow
@@ -79,7 +79,7 @@ cp SKILL.md ~/.claude/skills/claude-design-engineer/SKILL.md
 Once installed, simply prompt your agent:
 > *"Build a settings drawer using the claude-design-engineer skill standards."*
 
-The agent will automatically enforce 120 FPS compositor isolation, specular borders, and tactile spring physics.
+The agent will automatically follow the compositor rules (animate only `transform` and `opacity`), specular borders, and tactile spring physics.
 
 ---
 

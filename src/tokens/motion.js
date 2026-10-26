@@ -1,6 +1,6 @@
 /**
  * Calibrated Motion & Spring Physics Tokens
- * Crafted for 120 FPS compositor execution and natural organic tactile feedback.
+ * Crafted for compositor-only execution (transform and opacity) and natural organic tactile feedback.
  */
 
 const EASING_CURVES = {

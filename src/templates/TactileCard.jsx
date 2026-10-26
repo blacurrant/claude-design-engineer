@@ -5,7 +5,7 @@ import React, { useRef, useState } from 'react';
  * - Pointer-tracking dynamic radial specular highlight
  * - Multi-stop translucent border with inner ambient glow
  * - Tactile micro-compression on active click (scale: 0.985)
- * - 120 FPS compositor isolated (zero reflow)
+ * - Animates only transform and opacity (no layout reflow)
  */
 export function TactileCard({ children, className = '', onClick }) {
   const cardRef = useRef(null);
