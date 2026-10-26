@@ -5,6 +5,8 @@
 const assert = require('assert');
 const path = require('path');
 const fs = require('fs');
+const os = require('os');
+const { spawnSync } = require('child_process');
 const { auditCodebase } = require('../src/auditor');
 const motion = require('../src/tokens/motion');
 const surfaces = require('../src/tokens/surfaces');
@@ -52,5 +54,30 @@ assert(fs.existsSync(buttonTemplate), 'MagneticButton.jsx template must exist');
 const drawerTemplate = path.join(__dirname, '../src/templates/FluidDrawer.jsx');
 assert(fs.existsSync(drawerTemplate), 'FluidDrawer.jsx template must exist');
 console.log('✔ Component primitives (Card, Button, Drawer) validated.');
+
+// 5. Inline JSX style transition: all must be flagged as CDE002
+const inlineResults = auditCodebase(path.join(fixturesDir, 'inline-style.jsx'));
+assert(
+  inlineResults.issues.some(i => i.ruleId === 'CDE002'),
+  'Must flag CDE002 on inline style={{ transition: "all 0.3s" }}'
+);
+console.log('✔ Inline style transition: all flagged as CDE002.');
+
+// 6. CLI must fail loudly when nothing is scanned
+const cliPath = path.join(__dirname, '../bin/cli.js');
+const missing = spawnSync(process.execPath, [cliPath, 'audit', path.join(os.tmpdir(), 'cde-does-not-exist-' + Date.now())], { encoding: 'utf8' });
+assert.notStrictEqual(missing.status, 0, 'Audit of a missing path must exit non-zero');
+assert(missing.stderr.includes('Path not found'), 'Missing path must print "Path not found"');
+
+const emptyDir = fs.mkdtempSync(path.join(os.tmpdir(), 'cde-empty-'));
+try {
+  const empty = spawnSync(process.execPath, [cliPath, 'audit', emptyDir], { encoding: 'utf8' });
+  assert.notStrictEqual(empty.status, 0, 'Audit of an empty directory must exit non-zero');
+  assert(empty.stderr.includes('No scannable files found'), 'Empty directory must print "No scannable files found"');
+  assert(!empty.stdout.includes('Zero AI UI anti-patterns'), 'Empty directory must not report a clean score');
+} finally {
+  fs.rmSync(emptyDir, { recursive: true, force: true });
+}
+console.log('✔ CLI fails non-zero for a missing path and for an empty directory.');
 
 console.log('\nAll claude-design-engineer tests passed successfully! 🚀\n');

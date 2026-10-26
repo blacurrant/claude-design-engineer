@@ -20,7 +20,7 @@ const colors = {
 
 if (command === '--help' || command === '-h' || command === 'help') {
   console.log(`
-${colors.bold}${colors.cyan}CLAUDE DESIGN ENGINEER v1.0.0${colors.reset}
+${colors.bold}${colors.cyan}CLAUDE DESIGN ENGINEER v${require('../package.json').version}${colors.reset}
 ${colors.dim}Design Engineering Tokens, Spring Physics & AI UI Slop Auditor${colors.reset}
 
 ${colors.bold}USAGE:${colors.reset}
@@ -103,10 +103,19 @@ if (command === 'eject') {
 
 if (command === 'audit') {
   const scanTarget = args[1] || process.cwd();
+  if (!fs.existsSync(scanTarget)) {
+    console.error(`${colors.red}Path not found: ${scanTarget}${colors.reset}`);
+    process.exit(1);
+  }
+
   const results = auditCodebase(scanTarget);
+  if (results.filesCount === 0) {
+    console.error(`${colors.red}No scannable files found in ${scanTarget} (.jsx .tsx .js .ts .vue .svelte .html .css)${colors.reset}`);
+    process.exit(1);
+  }
 
   console.log(`\n${colors.bold}${colors.cyan}◆ CLAUDE DESIGN ENGINEER // AI UI SLOP AUDIT${colors.reset}`);
-  console.log(`${colors.dim}  Enforcing 120 FPS compositor contracts, specular depth & tactile physics${colors.reset}\n`);
+  console.log(`${colors.dim}  Checking for robotic transitions, flat borders, missing press feedback & layout-reflow animations${colors.reset}\n`);
 
   if (results.issues.length === 0) {
     console.log(`  ${colors.green}✔ Zero AI UI anti-patterns detected.${colors.reset} High tactile fidelity!`);

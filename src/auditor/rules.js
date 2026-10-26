@@ -32,7 +32,7 @@ module.exports = [
     description: 'Flags transition-all or default 300ms ease-in-out that feels sluggish.',
     check(line, lineNum, filePath) {
       const stripped = line.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\/\/.*$/, '').trim();
-      if (/\btransition-all\b/.test(stripped) || /transition:\s*all\b/i.test(stripped)) {
+      if (/\btransition-all\b/.test(stripped) || /\btransition\s*:\s*['"`]?\s*all\b/i.test(stripped)) {
         return {
           ruleId: 'CDE002',
           line: lineNum,
