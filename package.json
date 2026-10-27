@@ -1,6 +1,6 @@
 {
   "name": "@blacurrant/claude-design-engineer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Design engineering token systems, tactile spring physics, surface luminosity, and compositor contracts for Claude Code and AI frontend workflows.",
   "main": "src/index.js",
   "bin": {
@@ -25,6 +25,14 @@
   ],
   "author": "Nishant Choudhary <https://nishant.world>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blacurrant/claude-design-engineer.git"
+  },
+  "homepage": "https://github.com/blacurrant/claude-design-engineer#readme",
+  "bugs": {
+    "url": "https://github.com/blacurrant/claude-design-engineer/issues"
+  },
   "files": [
     "bin",
     "src",

@@ -3,7 +3,7 @@
 > **Design Engineering Token System, Tactile Physics, and AI UI Slop Auditor for Claude Code and Modern Frontend Workflows.**
 > Eliminate generic robotic AI code generation. Inject compositor-only animation rules (transform and opacity), specular surface depth, and organic spring micro-interactions into your codebase.
 
-[![npm version](https://img.shields.io/badge/npm-v1.0.1-00f0ff.svg)](https://www.npmjs.com/package/@blacurrant/claude-design-engineer)
+[![npm version](https://img.shields.io/npm/v/@blacurrant/claude-design-engineer.svg?color=00f0ff)](https://www.npmjs.com/package/@blacurrant/claude-design-engineer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Author: Nishant Choudhary](https://img.shields.io/badge/Author-Nishant%20Choudhary-00f0ff.svg)](https://nishant.world)
 [![Solana Sponsor](https://img.shields.io/badge/Solana-Sponsor-9945FF.svg)](https://explorer.solana.com/address/F9DJTXa6xP7mdG1niMNDhqcM3vDq8LZvg25JqJXGvDTf)
@@ -14,7 +14,7 @@
 
 When AI coding assistants generate frontend code, they default to predictable, robotic habits:
 - Flat gray borders (`border border-zinc-800` or `border-gray-200`) with zero optical depth or specular highlights.
-- Lazy blanket transitions (`transition-all duration-300 ease-in-out`) that cause layout jank on viewport resize.
+- Lazy blanket transitions (`transition-all duration-300 ease-in-out`) that animate every property, including layout ones, so the browser may do extra layout work during the animation.
 - Hover states with **zero active press feedback**, making web apps feel like static cardboard rather than responsive physical software.
 - Animating layout geometry (`height`, `width`, `top`, `margin`), which forces layout work on every frame and can make animations stutter on mobile.
 
