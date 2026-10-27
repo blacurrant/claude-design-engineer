@@ -1,0 +1,54 @@
+
+◆ CLAUDE DESIGN ENGINEER // AI UI SLOP AUDIT
+  Checking for robotic transitions, flat borders, missing press feedback & layout-reflow animations
+
+● settings-page.jsx
+  [WARN] L14: CDE001 — Flat robotic AI border. Lacks surface depth and ambient inner specular highlight.
+     › <section className="bg-white border border-gray-200 rounded-xl p-6 mb-6 shadow-sm">
+     → Recommendation: Add inner highlight glow: shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] and border-white/10.
+
+  [WARN] L22: CDE001 — Flat robotic AI border. Lacks surface depth and ambient inner specular highlight.
+     › className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+     → Recommendation: Add inner highlight glow: shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] and border-white/10.
+
+  [WARN] L30: CDE001 — Flat robotic AI border. Lacks surface depth and ambient inner specular highlight.
+     › className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+     → Recommendation: Add inner highlight glow: shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] and border-white/10.
+
+  [WARN] L36: CDE001 — Flat robotic AI border. Lacks surface depth and ambient inner specular highlight.
+     › <section className="bg-white border border-gray-200 rounded-xl p-6 mb-6 shadow-sm">
+     → Recommendation: Add inner highlight glow: shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] and border-white/10.
+
+  [ERROR] L45: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › className={`w-12 h-6 rounded-full transition-all duration-300 ${notifications ? 'bg-blue-600' : 'bg-gray-300'}`}
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [ERROR] L47: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › <span className={`block w-5 h-5 bg-white rounded-full transform transition-all duration-300 ${notifications ? 'translate-x-6' : 'translate-x-0.5'}`} />
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [ERROR] L57: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › className={`w-12 h-6 rounded-full transition-all duration-300 ${darkMode ? 'bg-blue-600' : 'bg-gray-300'}`}
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [ERROR] L59: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › <span className={`block w-5 h-5 bg-white rounded-full transform transition-all duration-300 ${darkMode ? 'translate-x-6' : 'translate-x-0.5'}`} />
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [ERROR] L67: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › <button className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-all">
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [WARN] L67: CDE003 — Interactive element has hover state but lacks tactile active compression feedback.
+     › <button className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-all">
+     → Recommendation: Add tactile press feedback: 'active:scale-[0.98]' and 'transition-transform duration-150'.
+
+----------------------------------------------------------------------
+DESIGN FIDELITY SCORE: 0/100 [Grade: F]
+  Scanned: 1 files in 1ms
+  Violations: 5 errors, 5 warnings
+
+⚡ Built by Nishant Choudhary (Creative Developer & Design Engineer)
+  Portfolio: https://nishant.world
+  Solana Tip Jar / Sponsor: F9DJTXa6xP7mdG1niMNDhqcM3vDq8LZvg25JqJXGvDTf
+

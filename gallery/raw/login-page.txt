@@ -1,0 +1,38 @@
+
+◆ CLAUDE DESIGN ENGINEER // AI UI SLOP AUDIT
+  Checking for robotic transitions, flat borders, missing press feedback & layout-reflow animations
+
+● login-page.jsx
+  [WARN] L31: CDE001 — Flat robotic AI border. Lacks surface depth and ambient inner specular highlight.
+     › className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+     → Recommendation: Add inner highlight glow: shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] and border-white/10.
+
+  [WARN] L42: CDE001 — Flat robotic AI border. Lacks surface depth and ambient inner specular highlight.
+     › className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+     → Recommendation: Add inner highlight glow: shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] and border-white/10.
+
+  [WARN] L51: CDE003 — Interactive element has hover state but lacks tactile active compression feedback.
+     › <a className="text-indigo-600 hover:underline cursor-pointer">Forgot password?</a>
+     → Recommendation: Add tactile press feedback: 'active:scale-[0.98]' and 'transition-transform duration-150'.
+
+  [ERROR] L57: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 disabled:opacity-50"
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [WARN] L57: CDE003 — Interactive element has hover state but lacks tactile active compression feedback.
+     › className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 disabled:opacity-50"
+     → Recommendation: Add tactile press feedback: 'active:scale-[0.98]' and 'transition-transform duration-150'.
+
+  [WARN] L64: CDE003 — Interactive element has hover state but lacks tactile active compression feedback.
+     › Don't have an account? <a className="text-indigo-600 hover:underline cursor-pointer">Sign up</a>
+     → Recommendation: Add tactile press feedback: 'active:scale-[0.98]' and 'transition-transform duration-150'.
+
+----------------------------------------------------------------------
+DESIGN FIDELITY SCORE: 32/100 [Grade: F]
+  Scanned: 1 files in 1ms
+  Violations: 1 errors, 5 warnings
+
+⚡ Built by Nishant Choudhary (Creative Developer & Design Engineer)
+  Portfolio: https://nishant.world
+  Solana Tip Jar / Sponsor: F9DJTXa6xP7mdG1niMNDhqcM3vDq8LZvg25JqJXGvDTf
+

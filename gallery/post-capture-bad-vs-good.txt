@@ -1,0 +1,91 @@
+=== BAD: landing-productivity.jsx (plain default output) ===
+
+◆ CLAUDE DESIGN ENGINEER // AI UI SLOP AUDIT
+  Checking for robotic transitions, flat borders, missing press feedback & layout-reflow animations
+
+● landing-productivity.jsx
+  [ERROR] L15: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › <a className="hover:text-gray-900 transition-all">Features</a>
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [WARN] L15: CDE003 — Interactive element has hover state but lacks tactile active compression feedback.
+     › <a className="hover:text-gray-900 transition-all">Features</a>
+     → Recommendation: Add tactile press feedback: 'active:scale-[0.98]' and 'transition-transform duration-150'.
+
+  [ERROR] L16: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › <a className="hover:text-gray-900 transition-all">Pricing</a>
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [WARN] L16: CDE003 — Interactive element has hover state but lacks tactile active compression feedback.
+     › <a className="hover:text-gray-900 transition-all">Pricing</a>
+     → Recommendation: Add tactile press feedback: 'active:scale-[0.98]' and 'transition-transform duration-150'.
+
+  [ERROR] L17: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › <a className="hover:text-gray-900 transition-all">Blog</a>
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [WARN] L17: CDE003 — Interactive element has hover state but lacks tactile active compression feedback.
+     › <a className="hover:text-gray-900 transition-all">Blog</a>
+     → Recommendation: Add tactile press feedback: 'active:scale-[0.98]' and 'transition-transform duration-150'.
+
+  [ERROR] L19: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › <button className="bg-indigo-600 text-white px-5 py-2 rounded-lg hover:bg-indigo-700 transition-all">
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [WARN] L19: CDE003 — Interactive element has hover state but lacks tactile active compression feedback.
+     › <button className="bg-indigo-600 text-white px-5 py-2 rounded-lg hover:bg-indigo-700 transition-all">
+     → Recommendation: Add tactile press feedback: 'active:scale-[0.98]' and 'transition-transform duration-150'.
+
+  [ERROR] L32: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › <button className="bg-indigo-600 text-white px-8 py-3 rounded-xl text-lg hover:bg-indigo-700 hover:shadow-xl transition-all duration-300">
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [WARN] L32: CDE003 — Interactive element has hover state but lacks tactile active compression feedback.
+     › <button className="bg-indigo-600 text-white px-8 py-3 rounded-xl text-lg hover:bg-indigo-700 hover:shadow-xl transition-all duration-300">
+     → Recommendation: Add tactile press feedback: 'active:scale-[0.98]' and 'transition-transform duration-150'.
+
+  [WARN] L35: CDE001 — Flat robotic AI border. Lacks surface depth and ambient inner specular highlight.
+     › <button className="border border-gray-300 px-8 py-3 rounded-xl text-lg hover:bg-gray-50 transition-all duration-300">
+     → Recommendation: Add inner highlight glow: shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] and border-white/10.
+
+  [ERROR] L35: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › <button className="border border-gray-300 px-8 py-3 rounded-xl text-lg hover:bg-gray-50 transition-all duration-300">
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [WARN] L35: CDE003 — Interactive element has hover state but lacks tactile active compression feedback.
+     › <button className="border border-gray-300 px-8 py-3 rounded-xl text-lg hover:bg-gray-50 transition-all duration-300">
+     → Recommendation: Add tactile press feedback: 'active:scale-[0.98]' and 'transition-transform duration-150'.
+
+  [WARN] L43: CDE001 — Flat robotic AI border. Lacks surface depth and ambient inner specular highlight.
+     › <div key={f.title} className="p-8 rounded-2xl border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+     → Recommendation: Add inner highlight glow: shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] and border-white/10.
+
+  [ERROR] L43: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › <div key={f.title} className="p-8 rounded-2xl border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+----------------------------------------------------------------------
+DESIGN FIDELITY SCORE: 0/100 [Grade: F]
+  Scanned: 1 files in 1ms
+  Violations: 7 errors, 8 warnings
+
+⚡ Built by Nishant Choudhary (Creative Developer & Design Engineer)
+  Portfolio: https://nishant.world
+  Solana Tip Jar / Sponsor: F9DJTXa6xP7mdG1niMNDhqcM3vDq8LZvg25JqJXGvDTf
+
+
+=== GOOD: tests/fixtures/good-component.jsx (repo fixture, not rewritten from the gallery) ===
+
+◆ CLAUDE DESIGN ENGINEER // AI UI SLOP AUDIT
+  Checking for robotic transitions, flat borders, missing press feedback & layout-reflow animations
+
+  ✔ Zero AI UI anti-patterns detected. High tactile fidelity!
+----------------------------------------------------------------------
+DESIGN FIDELITY SCORE: 100/100 [Grade: S]
+  Scanned: 1 files in 1ms
+  Violations: 0 errors, 0 warnings
+
+⚡ Built by Nishant Choudhary (Creative Developer & Design Engineer)
+  Portfolio: https://nishant.world
+  Solana Tip Jar / Sponsor: F9DJTXa6xP7mdG1niMNDhqcM3vDq8LZvg25JqJXGvDTf
+

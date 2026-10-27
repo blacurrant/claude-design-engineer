@@ -1,0 +1,74 @@
+
+◆ CLAUDE DESIGN ENGINEER // AI UI SLOP AUDIT
+  Checking for robotic transitions, flat borders, missing press feedback & layout-reflow animations
+
+● dashboard.jsx
+  [WARN] L4: CDE005 — Metric, currency, or numerical statistic rendered without tabular numbers.
+     › { label: 'Revenue', value: '$48,250', change: '+12%' },
+     → Recommendation: Add 'tabular-nums' or 'font-mono' to prevent visual jitter when numbers change.
+
+  [WARN] L11: CDE005 — Metric, currency, or numerical statistic rendered without tabular numbers.
+     › { id: 1, name: 'Acme Corp', amount: '$1,200', status: 'Paid' },
+     → Recommendation: Add 'tabular-nums' or 'font-mono' to prevent visual jitter when numbers change.
+
+  [WARN] L12: CDE005 — Metric, currency, or numerical statistic rendered without tabular numbers.
+     › { id: 2, name: 'Globex', amount: '$850', status: 'Pending' },
+     → Recommendation: Add 'tabular-nums' or 'font-mono' to prevent visual jitter when numbers change.
+
+  [WARN] L13: CDE005 — Metric, currency, or numerical statistic rendered without tabular numbers.
+     › { id: 3, name: 'Initech', amount: '$2,400', status: 'Paid' },
+     → Recommendation: Add 'tabular-nums' or 'font-mono' to prevent visual jitter when numbers change.
+
+  [ERROR] L23: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › <a className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all">Customers</a>
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [WARN] L23: CDE003 — Interactive element has hover state but lacks tactile active compression feedback.
+     › <a className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all">Customers</a>
+     → Recommendation: Add tactile press feedback: 'active:scale-[0.98]' and 'transition-transform duration-150'.
+
+  [ERROR] L24: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › <a className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all">Invoices</a>
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [WARN] L24: CDE003 — Interactive element has hover state but lacks tactile active compression feedback.
+     › <a className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all">Invoices</a>
+     → Recommendation: Add tactile press feedback: 'active:scale-[0.98]' and 'transition-transform duration-150'.
+
+  [ERROR] L25: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › <a className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all">Settings</a>
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [WARN] L25: CDE003 — Interactive element has hover state but lacks tactile active compression feedback.
+     › <a className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all">Settings</a>
+     → Recommendation: Add tactile press feedback: 'active:scale-[0.98]' and 'transition-transform duration-150'.
+
+  [WARN] L32: CDE003 — Interactive element has hover state but lacks tactile active compression feedback.
+     › <button className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
+     → Recommendation: Add tactile press feedback: 'active:scale-[0.98]' and 'transition-transform duration-150'.
+
+  [WARN] L39: CDE001 — Flat robotic AI border. Lacks surface depth and ambient inner specular highlight.
+     › <div key={s.label} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300">
+     → Recommendation: Add inner highlight glow: shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] and border-white/10.
+
+  [ERROR] L39: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › <div key={s.label} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300">
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [WARN] L47: CDE001 — Flat robotic AI border. Lacks surface depth and ambient inner specular highlight.
+     › <div className="bg-white border border-gray-200 rounded-lg shadow-sm">
+     → Recommendation: Add inner highlight glow: shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] and border-white/10.
+
+  [ERROR] L54: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › <tr key={r.id} className="border-b border-gray-100 hover:bg-gray-50 transition-all">
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+----------------------------------------------------------------------
+DESIGN FIDELITY SCORE: 0/100 [Grade: F]
+  Scanned: 1 files in 1ms
+  Violations: 5 errors, 6 warnings
+
+⚡ Built by Nishant Choudhary (Creative Developer & Design Engineer)
+  Portfolio: https://nishant.world
+  Solana Tip Jar / Sponsor: F9DJTXa6xP7mdG1niMNDhqcM3vDq8LZvg25JqJXGvDTf
+

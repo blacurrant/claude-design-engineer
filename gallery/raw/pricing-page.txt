@@ -1,0 +1,34 @@
+
+◆ CLAUDE DESIGN ENGINEER // AI UI SLOP AUDIT
+  Checking for robotic transitions, flat borders, missing press feedback & layout-reflow animations
+
+● pricing-page.jsx
+  [WARN] L18: CDE001 — Flat robotic AI border. Lacks surface depth and ambient inner specular highlight.
+     › <div className="mt-8 inline-flex items-center gap-3 border border-gray-200 rounded-full p-1 bg-white">
+     → Recommendation: Add inner highlight glow: shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] and border-white/10.
+
+  [WARN] L37: CDE001 — Flat robotic AI border. Lacks surface depth and ambient inner specular highlight.
+     › className="bg-white border border-gray-200 rounded-xl p-8 text-left shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-in-out"
+     → Recommendation: Add inner highlight glow: shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] and border-white/10.
+
+  [ERROR] L37: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › className="bg-white border border-gray-200 rounded-xl p-8 text-left shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-in-out"
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [ERROR] L49: CDE002 — 'transition-all' triggers layout calculations on unexpected DOM shifts.
+     › <button className="mt-8 w-full bg-blue-600 text-white py-2.5 rounded-lg hover:bg-blue-700 transition-all duration-300">
+     → Recommendation: Use specific compositor properties: 'transition-transform duration-150 ease-[cubic-bezier(0.16,1,0.3,1)]'
+
+  [WARN] L49: CDE003 — Interactive element has hover state but lacks tactile active compression feedback.
+     › <button className="mt-8 w-full bg-blue-600 text-white py-2.5 rounded-lg hover:bg-blue-700 transition-all duration-300">
+     → Recommendation: Add tactile press feedback: 'active:scale-[0.98]' and 'transition-transform duration-150'.
+
+----------------------------------------------------------------------
+DESIGN FIDELITY SCORE: 34/100 [Grade: F]
+  Scanned: 1 files in 2ms
+  Violations: 2 errors, 3 warnings
+
+⚡ Built by Nishant Choudhary (Creative Developer & Design Engineer)
+  Portfolio: https://nishant.world
+  Solana Tip Jar / Sponsor: F9DJTXa6xP7mdG1niMNDhqcM3vDq8LZvg25JqJXGvDTf
+
